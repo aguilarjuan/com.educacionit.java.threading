@@ -2,10 +2,13 @@
 package com.educacionit.java.customers.client;
 
 
-import java.io.*;
-import java.net.*;
-
 import org.apache.log4j.Logger;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 
 
 public class TCPClient {

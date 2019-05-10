@@ -11,77 +11,22 @@
        - POM setup.
        -->
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.educacionit.java.threading</groupId>
-    <artifactId>thread-basic</artifactId>
+    <groupId>com.educacionit.java.advanced</groupId>
+    <artifactId>educacionit-java-thread</artifactId>
     <version>1.0.0</version>
-    <name>thread-basic</name>
-    <packaging>jar</packaging>
-    <description>Jva Threading Basic.</description>
-
-    <developers>
-        <developer>
-            <id>raul.g.pena</id>
-            <name>Raul Peña</name>
-            <email>raul.pena@gmail.com</email>
-        </developer>
-    </developers>
+    <packaging>pom</packaging>
+    <name>module</name>
+    <description>Java Thread and Networking.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>8</java.version>
     </properties>
 
-    <!--
-       - Dependencies declarations.
-       -->
-    <dependencies>
-
-        <!--
-           - Test dependencies.
-           -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!--
-           - Compile dependencies.
-           -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.3.1</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-all</artifactId>
-            <version>5.15.2</version>
-            <scope>compile</scope>
-        </dependency>
-
-
-
-    </dependencies>
-
-    <!--
-       - Build setup.
-       -->
-    <build>
-        <finalName>simple</finalName>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
+    <modules>
+        <module>startup-threading</module>
+        <module>tcp-socket-server</module>
+        <module>tcp-socket-client</module>
+    </modules>
+ 
 </project>

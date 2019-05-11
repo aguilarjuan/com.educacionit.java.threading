@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Scanner;
 
 
 public class TCPClient {
@@ -64,12 +65,28 @@ public class TCPClient {
     }
 
 
-    public static void main (String[] args) {
+    public static void main (String[] args) throws Exception {
 
         TCPClient client = new TCPClient ();
         client.startConnection ("127.0.0.1", 5555);
 
-        String msg1 = client.sendMessage("hello");
-        System.out.println (msg1);
+        Scanner sc = new Scanner (System.in);
+
+        while (true) {
+
+            System.out.println ("INGRESE ALGO:");
+            System.in.read ();
+
+            String request = sc.next ();
+
+            String msg1 = client.sendMessage (request);
+            System.out.println (msg1);
+
+            if (request.equals (".")) {
+
+                System.out.println ("SALIENDO DE LA APP..");
+                System.exit(0);
+            }
+        }
     }
 }
